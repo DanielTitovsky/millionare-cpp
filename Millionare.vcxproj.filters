@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\GameScreens">
+      <UniqueIdentifier>{cc45b3b1-8460-45e1-976b-1b579f371222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\GameScreens">
+      <UniqueIdentifier>{707b6f75-a6ed-48c8-aa37-f3ef34f4a0d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Millionare.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestionsManager.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuGameScreen.cpp">
+      <Filter>Исходные файлы\GameScreens</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingGameScreen.cpp">
+      <Filter>Исходные файлы\GameScreens</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutGameScreen.cpp">
+      <Filter>Исходные файлы\GameScreens</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsGameScreen.cpp">
+      <Filter>Исходные файлы\GameScreens</Filter>
+    </ClCompile>
+    <ClCompile Include="GameplayGameScreen.cpp">
+      <Filter>Исходные файлы\GameScreens</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="QuestionsManager.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameScreen.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuGameScreen.h">
+      <Filter>Файлы заголовков\GameScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingGameScreen.h">
+      <Filter>Файлы заголовков\GameScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutGameScreen.h">
+      <Filter>Файлы заголовков\GameScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsGameScreen.h">
+      <Filter>Файлы заголовков\GameScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="GameplayGameScreen.h">
+      <Filter>Файлы заголовков\GameScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="LanguageHelper.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="questions.json">
+      <Filter>Файлы ресурсов</Filter>
+    </Media>
+  </ItemGroup>
+</Project>
