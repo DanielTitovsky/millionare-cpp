@@ -11,13 +11,13 @@ Component gameScreens::SettingsGameScreen::Render()
     Component userNameInput = Input(&userName, "Username (for leaderboards)");
 
     auto backButton = Button("Back", [&]() {
-        this->gameManager->SetGameScreen(new MainMenuGameScreen(this->gameManager));
+        this->gameManager->GoToMainMenu();
     });
     auto saveButton = Button("Save", [&]() {
         gameManager->gameState.userName = userName;
         gameManager->gameState.activeLanguageId = selectedLanguage;
 
-        this->gameManager->SetGameScreen(new MainMenuGameScreen(this->gameManager));
+        this->gameManager->GoToMainMenu();
     });
 
     vector<string> languagesList = {

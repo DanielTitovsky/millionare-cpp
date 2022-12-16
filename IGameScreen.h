@@ -27,9 +27,7 @@ public:
 				color(Color::Green3, paragraphAlignCenter("---------------------> MILLIONARE <---------------------"))
 			}) | border,
 			vbox({
-				filler(),
-				content,
-				filler()
+				content | flex_grow,
 			}) | border | flex
 		});
 	}

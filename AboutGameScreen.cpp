@@ -8,7 +8,7 @@ Component gameScreens::AboutGameScreen::Render()
     string aboutText = "Football, also called association football or soccer, is a game involving two teams of 11 players who try to maneuver the ball into the other team's goal without using their hands or arms. The team that scores more goals wins. Football is the world's most popular ball game in numbers of participants and spectators.";
     
     auto backButton = Button("Back", [&]() {
-        this->gameManager->SetGameScreen(new MainMenuGameScreen(this->gameManager));
+        this->gameManager->GoToMainMenu();
     });
 
     auto container = Container::Vertical({ backButton });

@@ -39,20 +39,14 @@ Component gameScreens::MainMenuGameScreen::Render()
         this->Update();
 
         return WrapMainUI(
-            hbox({
+            vbox({
                 filler(),
-                vbox({
-                    paragraphAlignCenter(LanguageHelper::Translit("ÃËÀÂÍÎÅ ÌÅÍÞ")),
-                    text(""),
-                    vbox({
-                      filler(),
-                      startButton->Render() | center | color(Color::Green),
-                      aboutButton->Render() | center | color(Color::Yellow),
-                      settingsButton->Render() | center | color(Color::Aquamarine1),
-                      exitButton->Render() | center | color(Color::Red),
-                      filler()
-                    })
-                }),
+                paragraphAlignCenter(LanguageHelper::Translit("ÃËÀÂÍÎÅ ÌÅÍÞ")),
+                text(""),
+                startButton->Render() | center | color(Color::Green),
+                aboutButton->Render() | center | color(Color::Yellow),
+                settingsButton->Render() | center | color(Color::Aquamarine1),
+                exitButton->Render() | center | color(Color::Red),
                 filler()
             })
         );
