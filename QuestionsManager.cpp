@@ -23,5 +23,5 @@ Value QuestionsManager::ReadFile()
 Value QuestionsManager::GetQuestions()
 {
     Value fileData = ReadFile();
-    return fileData["questions"];
+    return fileData;
 }

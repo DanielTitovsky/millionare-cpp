@@ -2,8 +2,46 @@
 #include "MainMenuGameScreen.h"
 #include "LanguageHelper.h"
 
+struct GameStats
+{
+    int questionsNumber = 0;
+    int score = 0;
+    bool helpCallUsed = false;
+    bool help50Used = false;
+    Value currentQuestion = NULL;
+    QuestionsManager questionsManager;
+
+    void Answer(int answerNumber) 
+    {
+        bool isRight = currentQuestion["answer"] == answerNumber;
+        if (isRight) 
+        {
+            score += 125;
+            NextQuestion();
+        }
+        else {
+            score -= 125;
+            NextQuestion();
+        }
+    }
+    void NextQuestion()
+    {
+        auto questions = questionsManager.GetQuestions();
+        currentQuestion = questions["Lite"][questionsNumber];
+        questionsNumber++;
+    }
+
+};
+
 Component gameScreens::GameplayGameScreen::Render()
 {
+    GameStats gameStats;
+    gameStats.NextQuestion();
+    std::string answer1 = "";
+    std::string answer2 = "";
+    std::string answer3 = "";
+    std::string answer4 = "";
+
     auto passButton = Button("PASS", [&]() {
         this->gameManager->GoToMainMenu();
     });
@@ -11,10 +49,19 @@ Component gameScreens::GameplayGameScreen::Render()
         this->gameManager->GoToMainMenu();
     });
 
-    auto optionsButton1 = Button("1) Tom", [&]() { });
-    auto optionsButton2 = Button("2) Jerry", [&]() {});
-    auto optionsButton3 = Button("3) Mickey", [&]() {});
-    auto optionsButton4 = Button("4) Mouse", [&]() {});
+    auto optionsButton1 = Button(&answer1, [&]() 
+     { 
+            gameStats.Answer(0);
+     });
+    auto optionsButton2 = Button(&answer2, [&]() {
+            gameStats.Answer(1);
+        });
+    auto optionsButton3 = Button(&answer3, [&]() {
+            gameStats.Answer(2);
+        });
+    auto optionsButton4 = Button(&answer4, [&]() {
+            gameStats.Answer(3);
+        });
 
     auto helpCall = Button("Call a friend", [&]() {});
     auto help50 = Button("50/50", [&]() {});
@@ -32,6 +79,30 @@ Component gameScreens::GameplayGameScreen::Render()
 
     auto renderer = Renderer(container, [&] {
         this->Update();
+        answer1 = "";
+        answer2 = "";
+        answer3 = "";
+        answer4 = "";
+
+        for (int i = 0; i < gameStats.currentQuestion["options"].size(); i++) 
+        {
+            std::string q = gameStats.currentQuestion["options"][i].toStyledString();
+            switch (i) 
+            {
+             case 0:
+                 answer1 = q ;
+                 break;
+             case 1:
+                 answer2 = q;
+                 break; 
+             case 2:
+                 answer3 = q;
+                 break;
+             case 3:
+                 answer4 = q;
+                 break;
+            }
+        }
 
         return WrapMainUI(
             vbox({
@@ -40,14 +111,14 @@ Component gameScreens::GameplayGameScreen::Render()
                     filler(),
                     vbox({
                         text(LanguageHelper::Translit("Внимание "+gameManager->gameState.userName+"!")) | bold | center | color(Color::Green3),
-                        text(LanguageHelper::Translit("Вопрос номер 1")) | center
+                        text(LanguageHelper::Translit("Вопрос номер "+ std::to_string(gameStats.questionsNumber))) | center
                     }),
                     filler(),
                     backButton->Render() | color(Color::Red)
                 }),
                 filler(),
                 vbox({
-                    paragraphAlignCenter(LanguageHelper::Translit("Кто у нас самый умный?")) | borderDouble,
+                    paragraphAlignCenter(LanguageHelper::Translit(gameStats.currentQuestion["text"].toStyledString())) | borderDouble,
                     filler(),
                     hbox({
                       optionsButton1->Render(),
@@ -67,7 +138,7 @@ Component gameScreens::GameplayGameScreen::Render()
                 }) | center,
                 separator(),
                 hbox({
-                    text("Your score: 20")
+                    text("Your score: "+ std::to_string(gameStats.score))
                 }) | center
             })
         );

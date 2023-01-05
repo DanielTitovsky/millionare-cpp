@@ -1,98 +1,73 @@
 {
-    "level1": [
-        {
-            "text": "How many parrots?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        },
-        {
-            "text": "How many parrots 2?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        },
-        {
-            "text": "How many parrots 3?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        }
-    ],
-    "level2": [
-        {
-            "text": "How many parrots?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        },
-        {
-            "text": "How many parrots 2?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        },
-        {
-            "text": "How many parrots 3?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        }
-    ],
-    "level3": [
-        {
-            "text": "How many parrots?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        },
-        {
-            "text": "How many parrots 2?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        },
-        {
-            "text": "How many parrots 3?",
-            "options": [
-                "two",
-                "three",
-                "four",
-                "five"
-            ],
-            "answer": 1
-        }
-    ]
+  "Lite": [
+    {
+      "text": "Kakoe rastenie sushchestvuet na samom dele?",
+      "options": [
+        "Loh chilijskij",
+        "Loh indijskij",
+        "Loh russkij"
+      ],
+      "answer": 1
+    },
+    {
+      "text": "Kakoj gorod ob yavlen oficial'noj rodinoj russkogo Deda Moroza?",
+      "options": [
+        "Malaya Vishera",
+        "Velikij Ustyug",
+        "Nizhnij Novgorod"
+      ],
+      "answer": 1
+    },
+    {
+      "text": "CHto provodit bokser, nanosyashchij udar protivniku snizu?",
+      "options": [
+        "Huk",
+        "Dzhem",
+        "Apperkot"
+      ],
+      "answer": 2
+    },
+    {
+      "text": "Kak nazyvaetsya blizhajshaya k Zemle zvezda?",
+      "options": [
+        "Polyarnaya",
+        "Solnce",
+        "Sirius"
+      ],
+      "answer": 1
+    },
+    {
+      "text": "CHto takoe desnica?",
+      "options": [
+        "Ruka",
+        "Glaz",
+        "SHeya"
+      ],
+      "answer": 0
+    }
+  ],
+  "Normal": [
+    {
+      "text": "How many parrots?",
+      "options": [
+        "two",
+        "three",
+        "four",
+        "five"
+      ],
+      "answer": 1
+    }
+  ],
+  "Hard": [
+    {
+      "text": "How many parrots?",
+      "options": [
+        "two",
+        "three",
+        "four",
+        "five"
+      ],
+      "answer": 1
+    }
+  ]
 }
