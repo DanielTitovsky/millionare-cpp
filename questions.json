@@ -48,24 +48,96 @@
   ],
   "Normal": [
     {
-      "text": "How many parrots?",
+      "text": "Kakova dlina olimpijskogo plavatel'nogo bassejna?",
       "options": [
-        "two",
-        "three",
-        "four",
-        "five"
+        "25 metrov",
+        "50 metrov",
+        "60 metrov",
+        "40 metrov"
       ],
       "answer": 1
+    },
+    {
+      "text": "CHto pomogaet zapomnit' mnemonicheskoe pravilo «Eto ya znayu i pomnyu prekrasno»?",
+      "options": [
+        "CHislo Pi",
+        "Ryad aktivnosti metallov",
+        "Kak gotovit' bliny"
+      ],
+      "answer": 0
+    },
+    {
+      "text": "Kakuyu ploshchad' imeet kletka standartnoj shkol'noj tetradi?",
+      "options": [
+        "0.25 kv.sm",
+        "0.5 kv.sm",
+        "0.75 kv.sm"
+      ],
+      "answer": 0
+    },
+    {
+      "text": "CHto proiskhodit na sorevnovaniyah po strel'be, esli soperniki nabrali odinakovoe kolichestvo ochkov?",
+      "options": [
+        "Pereverbovka",
+        "Perebranka",
+        "Perestrelka"
+      ],
+      "answer": 2
+    },
+    {
+      "text": "Kakoj iz korolej v standartnoj kartochnoj kolode ne imeet usov?",
+      "options": [
+        "Korol' tref",
+        "Korol' pik",
+        "Korol' chervej"
+      ],
+      "answer": 2
     }
   ],
   "Hard": [
     {
-      "text": "How many parrots?",
+      "text": " Kak nazyvalis' starinnye russkie pushki-gaubicy?",
       "options": [
-        "two",
-        "three",
-        "four",
-        "five"
+        "Grifon",
+        "Kentavr",
+        "Edinorog"
+      ],
+      "answer": 2
+    },
+    {
+      "text": "Reki s kakim nazvaniem net na territorii Rossii?",
+      "options": [
+        "Spina",
+        "Usta",
+        "Palec"
+      ],
+      "answer": 0
+    },
+    {
+      "text": "Skol'ko vkusovyh receptorov imeet srednij chelovecheskij yazyk?",
+      "options": [
+        "100",
+        "1,000",
+        "10,000",
+        "100,000"
+      ],
+      "answer": 1
+    },
+    {
+      "text": "Kakoe zhivotnoe nahoditsya pod zashchitoj zakona v Rime?",
+      "options": [
+        "Kuricy",
+        "Sobaki",
+        "Koshki"
+      ],
+      "answer": 1
+    },
+    {
+      "text": "Kakaya ptica yavlyaetsya edinstvennoj, kotoraya mozhet letat' zadom napered?",
+      "options": [
+        "Popugaj",
+        "Kolibri",
+        "Lastochka"
       ],
       "answer": 1
     }
